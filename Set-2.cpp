@@ -187,9 +187,50 @@ int main(){
     }
 }
 */
-
+/*
 int main(){
-        
+    int size = 4, k, windowSum = 0, maxSum = 0;
+    int arr[size] = {100, 200, 300, 400};
+    
+    cout << "Enter value of k: ";
+    cin >> k;
+
+    for(int i = 0; i < k; i++){
+        windowSum = arr[i] + windowSum;
+    }
+
+    maxSum = windowSum;
+    
+    for(int i = 1; i < size-k+1; i++){
+        windowSum = windowSum - arr[i-1] + arr[i+k-1];
+        if(windowSum > maxSum){
+            maxSum = windowSum;
+        }
+    }
+    
+    cout << maxSum;
 
     return 0;
 }
+*/
+/*
+int main(){
+    int size = 6, profit, minPrice, maxProfit = -1;
+    int arr[size] = {7, 1, 5, 3, 6, 4};
+    minPrice = arr[0];
+
+    for(int i = 0; i < size; i++){
+        if(minPrice > arr[i]){
+            minPrice = arr[i];
+        }
+        profit = arr[i] - minPrice;
+        if(maxProfit < profit){
+            maxProfit = profit;
+        }
+    }
+
+    cout << maxProfit;
+
+    return 0;
+}
+*/

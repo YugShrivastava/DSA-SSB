@@ -60,10 +60,9 @@ int main() {
         c = tolower(c);
     }
 
-    // Copy only alphanumeric characters
     for (int i = 0; i < str.size(); i++) {
         if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= '0' && str[i] <= '9')) {
-            strCpy.push_back(str[i]); // Use push_back to append valid characters
+            strCpy.push_back(str[i]);
         }
     }
     int flag = 0, n = strCpy.size();

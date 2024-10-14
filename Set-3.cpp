@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+/*
 int findSquareFreeFactors(int number)
 {
     int count = 0;
@@ -36,3 +37,5 @@ int main(){
      int count = findSquareFreeFactors(number);
      cout << "No. of square free factors are " << count;
 }
+*/
+

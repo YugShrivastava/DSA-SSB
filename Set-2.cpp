@@ -1,9 +1,9 @@
-#include<iostream>
+#include <iostream>
 #include <string>
 #include <algorithm>
 #include <cctype>
 #include <vector>
-#include <queue> 
+#include <queue>
 
 using namespace std;
 
@@ -25,7 +25,7 @@ int subArrayLargestSum(int arr[], int size){
 
 int main(){
     int arr[9] = {-2,1,-3,4,-1,2,1,-5,4};
-    
+
     cout << subArrayLargestSum(arr, 9);
 
     return 0;
@@ -67,19 +67,19 @@ int main() {
     }
     int flag = 0, n = strCpy.size();
     for(int i = 0; i < strCpy.size(); i++){
-		--n;
+        --n;
         if(strCpy[i] != strCpy[n]){
-			flag = 0;
-			break;
-		}
-		flag = 1;
-	}
-	if(flag == 1){
-		cout << "Palindrome";
-	}
-	else{
-		cout << "Not a Palindrome";
-	}
+            flag = 0;
+            break;
+        }
+        flag = 1;
+    }
+    if(flag == 1){
+        cout << "Palindrome";
+    }
+    else{
+        cout << "Not a Palindrome";
+    }
 
     return 0;
 }
@@ -190,7 +190,7 @@ int main(){
 int main(){
     int size = 4, k, windowSum = 0, maxSum = 0;
     int arr[size] = {100, 200, 300, 400};
-    
+
     cout << "Enter value of k: ";
     cin >> k;
 
@@ -199,14 +199,14 @@ int main(){
     }
 
     maxSum = windowSum;
-    
+
     for(int i = 1; i < size-k+1; i++){
         windowSum = windowSum - arr[i-1] + arr[i+k-1];
         if(windowSum > maxSum){
             maxSum = windowSum;
         }
     }
-    
+
     cout << maxSum;
 
     return 0;
@@ -254,7 +254,8 @@ int main(){
 }
 */
 
-int main(){
-    
+int main()
+{
+
     return 0;
 }

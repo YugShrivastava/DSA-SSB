@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <stack>
 using namespace std;
 
 /*
@@ -131,6 +132,66 @@ int main(){
 }
 */
 
-int main(){
-    
+int main()
+{
+    string str;
+    stack<char> st;
+    int flag = 0;
+    cout << "Enter the string: ";
+    cin >> str;
+
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (str[i] == ')')
+        {
+            if (!st.empty() && st.top() == '(')
+            {
+                st.pop();
+            }
+            else
+            {
+                st.push(str[i]);
+            }
+        }
+        else if (str[i] == '}')
+        {
+            if (!st.empty() && st.top() == '{')
+            {
+                st.pop();
+            }
+            else
+            {
+                st.push(str[i]);
+            }
+        }
+        else if (str[i] == ']')
+        {
+            if (!st.empty() && st.top() == '[')
+            {
+                st.pop();
+            }
+            else
+            {
+                st.push(str[i]);
+            }
+        }
+        else if (str[i] == '(' || str[i] == '{' || str[i] == '[')
+        {
+            st.push(str[i]);
+        }
+        else
+        {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (!st.empty() || flag == 1)
+    {
+        cout << "The String is invalid";
+    }
+    else
+    {
+        cout << "The String is valid";
+    }
 }

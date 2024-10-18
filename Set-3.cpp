@@ -142,37 +142,24 @@ int main()
 
     for (int i = 0; i < str.length(); i++)
     {
-        if (str[i] == ')')
+        if (str[i] == ')' || str[i] == '}' || str[i] == ']')
         {
-            if (!st.empty() && st.top() == '(')
+            if (st.empty())
+            {
+                flag = true;
+                break;
+            }
+            char top = st.top();
+            if ((str[i] == ')' && top == '(') ||
+                (str[i] == '}' && top == '{') ||
+                (str[i] == ']' && top == '['))
             {
                 st.pop();
             }
             else
             {
-                st.push(str[i]);
-            }
-        }
-        else if (str[i] == '}')
-        {
-            if (!st.empty() && st.top() == '{')
-            {
-                st.pop();
-            }
-            else
-            {
-                st.push(str[i]);
-            }
-        }
-        else if (str[i] == ']')
-        {
-            if (!st.empty() && st.top() == '[')
-            {
-                st.pop();
-            }
-            else
-            {
-                st.push(str[i]);
+                flag = true;
+                break;
             }
         }
         else if (str[i] == '(' || str[i] == '{' || str[i] == '[')

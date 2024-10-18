@@ -3,6 +3,7 @@
 #include <stack>
 using namespace std;
 
+// Question 1 -:
 /*
 int findSquareFreeFactors(int number)
 {
@@ -39,6 +40,8 @@ int main(){
      cout << "No. of square free factors are " << count;
 }
 */
+
+// Question 3 -:
 /*
 int main()
 {
@@ -75,6 +78,8 @@ int main()
     }
 }
 */
+
+// Question 4 -:
 /*
 bool validString(string str)
 {
@@ -114,6 +119,8 @@ int main()
         cout << "false";
 }
 */
+
+// Question 2 -:
 /*
 int main(){
     int arr[3] = {10, 100, 1000}, size = 3, orEle = 0;
@@ -132,6 +139,8 @@ int main(){
 }
 */
 
+// Question 5 -:
+/*
 int main()
 {
     string str;
@@ -181,4 +190,116 @@ int main()
     {
         cout << "The String is valid";
     }
+}
+*/
+
+// Question 6 -:
+/*
+void movecycleRight(string &str)
+{
+    char temp;
+    for (int i = str.length() - 1; i >= 1; i--)
+    {
+        temp = str[i];
+        str[i] = str[i - 1];
+        str[i - 1] = temp;
+    }
+}
+
+void moveCycleLeft(string &str)
+{
+    char temp;
+    for (int i = 0; i < str.length() - 1; i++)
+    {
+        temp = str[i];
+        str[i] = str[i + 1];
+        str[i + 1] = temp;
+    }
+}
+
+bool checkPalindrome(string str)
+{
+    int i = 0, j = str.length() - 1;
+    while (i < j)
+    {
+        if (str[i] != str[j])
+        {
+            return false;
+        }
+        i++;
+        j--;
+    }
+    return true;
+}
+
+int leftPalindrome(string str)
+{
+    int count = 0;
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (checkPalindrome(str))
+            return count;
+        else
+        {
+            moveCycleLeft(str);
+            count++;
+        }
+    }
+    return -1;
+}
+
+int rightPalindrome(string str)
+{
+    int count = 0;
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (checkPalindrome(str))
+            return count;
+        else
+        {
+            movecycleRight(str);
+            count++;
+        }
+    }
+    return -1;
+}
+
+int main()
+{
+    int n;
+    vector<string> strings;
+
+    cout << "Enter the number of strings: ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++)
+    {
+        string str;
+        cout << "Enter the string: ";
+        cin >> str;
+        strings.push_back(str);
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        if (checkPalindrome(strings[i]))
+        {
+            cout << 0 << endl;
+        }
+        else
+        {
+            int right = rightPalindrome(strings[i]);
+            int left = leftPalindrome(strings[i]);
+            if (left < right && (right != -1 || left != -1))
+                cout << left << endl;
+            else
+                cout << right << endl;
+        }
+    }
+}
+*/
+
+
+int main(){
+    
 }

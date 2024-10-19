@@ -299,8 +299,8 @@ int main()
 }
 */
 
-//Question 7 -:
+// Question 7 -:
 
-int main(){
-    
+int main()
+{
 }

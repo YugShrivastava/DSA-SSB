@@ -22,7 +22,7 @@ int main(){
 		}
 	}
 	cout << max;
-	
+
 	return 0;
 }
 */
@@ -38,7 +38,7 @@ int main(){
 			arr3[k] = arr2[j];
 			j++;
 		}
-		
+
 		cout << arr3[k] << "\t";
 	}
 
@@ -51,12 +51,12 @@ int main(){
 	for(int i = 0; i < 7; i++){
 		cin >> arr[i];
 	}
-	
+
 	for(int i = 0; i < 3; i++){
 		if(i >= n){
 			break;
 		}
-		
+
 		swap(arr[i], arr[i + n]);
 		n--;
 	}
@@ -84,7 +84,7 @@ int main(){
 	else{
 		cout << "Not a Palindrome";
 	}
-	
+
 	return 0;
 }
 */
@@ -93,7 +93,7 @@ int main(){
 	int arr[5] = {1, 2, 3, 4, 5}, num, flag = 0;
 	cout << "Enter the number: ";
 	cin >> num;
-	
+
 	for(int i = 0; i < 5; i++){
 		if(arr[i] == num){
 			cout << "Index = " << i;
@@ -101,7 +101,7 @@ int main(){
 			break;
 		}
 	}
-	
+
 	if(flag == 0){
 		cout << -1;
 	}
@@ -146,7 +146,7 @@ int main(){
 /*
 void parallelogram(int rows){
 	for(int i = rows; i > -1; i--){
-    		for(int j = i; j >-1; j--){
+			for(int j = i; j >-1; j--){
 			cout << " ";
 		}
 		cout << "****";
@@ -155,9 +155,9 @@ void parallelogram(int rows){
 }
 
 int main(){
-    int rows;
-    cin >> rows;
-    parallelogram(rows);
+	int rows;
+	cin >> rows;
+	parallelogram(rows);
 }
 */
 /*
@@ -173,7 +173,7 @@ void rightTriangle(int rows){
 int main(){
 	int rows;
 	cin >> rows;
-	
+
 	rightTriangle(rows);
 }
 */
@@ -196,7 +196,7 @@ void halfDiamond(int columns){
 int main(){
 	int columns;
 	cin >> columns;
-	
+
 	halfDiamond(columns);
 }
 */
@@ -235,7 +235,84 @@ int main(){
 	fullTriangle(columns);
 }
 */
+/*
+int main()
+{
+	int number, flag, n;
+	cout << "Enter the number: ";
+	cin >> number;
+
+	flag = number % 2;
+	n = flag;
+
+	for (int i = 0; i < number; i++)
+	{
+		if (flag == n)
+		{
+			for (int j = 1; j <= number; j++)
+			{
+				cout << j;
+			}
+			flag = (number - 1) % 2;
+		}
+		else
+		{
+			for (int j = number; j > 0; j--)
+			{
+				cout << j;
+			}
+			flag = n;
+		}
+		cout << endl;
+	}
+}
+*/
+/*
+void printPattern(int row, int column){
+	for(int i = 0; i < column; i++){
+		cout << "1";
+	}
+	cout << endl;
+	for(int i = 0; i < row-2; i++){
+		cout << "1";
+		for(int j = 0; j < column - 2; j++){
+			cout << "0";
+		}
+		cout << "1" << endl;
+	}
+	for(int i = 0; i < column; i++){
+		cout << "1";
+	}
+}
 
 int main(){
-	
+	int row, column;
+	cout << "Enter row number: ";
+	cin >> row;
+	cout << "Enter column number: ";
+	cin >> column;
+
+	printPattern(row, column);
 }
+*/
+/*
+void printPattern(int row){
+	for(int i = 0; i < row; i++){
+		for(int j = i + 1; j <= row; j++){
+			cout << j;
+		}
+		for(int j = 0; j < i; j++){
+			cout << row;
+		}
+		cout << endl;
+	}
+}
+
+int main(){
+	int row;
+	cout << "Enter the number of rows: ";
+	cin >> row;
+
+	printPattern(row);
+}
+*/

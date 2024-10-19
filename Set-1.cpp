@@ -200,4 +200,42 @@ int main(){
 	halfDiamond(columns);
 }
 */
+/*
+void fullTriangle(int columns){
+	for(int i = 0; i < columns; i++){
+		for(int j = columns; j > i; j--){
+			cout << " ";
+		}
+		for(int k = 0; k <= i; k++){
+			cout << "*";
+		}
+		for(int l = 1; l <= i; l++){
+			cout << "*";
+		}
+		cout << endl;
+	}
+	for(int i = 1; i < columns; i++){
+		for(int j = 0; j <= i; j++){
+			cout << " ";
+		}
+		for(int k = columns; k > i; k--){
+			cout << "*";
+		}
+		for(int l = columns-1; l > i; l--){
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
 
+int main(){
+	int columns;
+	cout << "Enter the no. of columns: ";
+	cin >> columns;
+	fullTriangle(columns);
+}
+*/
+
+int main(){
+	
+}
